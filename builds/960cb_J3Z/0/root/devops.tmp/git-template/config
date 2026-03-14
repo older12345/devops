@@ -1,0 +1,10 @@
+[init]
+	defaultBranch = none
+[fetch]
+	recurseSubmodules = false
+[credential]
+	interactive = never
+[gc]
+	autoDetach = false
+[include]
+	path = /root/devops/builds/960cb_J3Z/0/root/devops.tmp/.gitlab-runner.ext.conf
