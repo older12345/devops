@@ -2,13 +2,75 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Мой сайт</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сайт Олега Воробцова</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            max-width: 600px;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+        .author {
+            margin-top: 30px;
+            font-style: italic;
+            font-weight: bold;
+            color: #ffd700; /* Золотой цвет */
+            font-size: 1.4em;
+        }
+        .date {
+            margin-top: 10px;
+            font-size: 0.9em;
+            opacity: 0.8;
+        }
+    </style>
 </head>
 <body>
-    <h1>Привет! Это мой первый сайт, развернутый через GitLab CI/CD!</h1>
-    <p>Дата обновления: <span id="date"></span></p>
+
+    <div class="container">
+        <h1>Привет! Это мой сайт.</h1>
+        <p>
+            Он автоматически развернут на сервере Linux с помощью 
+            <strong>GitLab CI/CD</strong>.
+            <br>
+            Никакого FTP, никаких ручных копирований. Только код и автоматика! 🚀
+        </p>
+        
+        <div class="author">
+            Автор: Олег Воробцов
+        </div>
+        
+        <div class="date" id="build-date"></div>
+    </div>
+
     <script>
-        document.getElementById('date').textContent = new Date().toLocaleString();
+        // Скрипт для отображения текущей даты
+        const now = new Date();
+        document.getElementById('build-date').textContent = "Обновлено: " + now.toLocaleDateString() + " " + now.toLocaleTimeString();
     </script>
+
 </body>
 </html>
