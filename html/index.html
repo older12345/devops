@@ -25,52 +25,28 @@
             border: 1px solid rgba(255, 255, 255, 0.18);
             max-width: 600px;
         }
-        h1 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-        p {
-            font-size: 1.2em;
-            line-height: 1.6;
-        }
+        h1 { font-size: 2.5em; margin-bottom: 20px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+        p { font-size: 1.2em; line-height: 1.6; }
         .author {
             margin-top: 30px;
             font-style: italic;
             font-weight: bold;
-            color: #ffd700; /* Золотой цвет */
+            color: #ffd700;
             font-size: 1.4em;
         }
-        .date {
-            margin-top: 10px;
-            font-size: 0.9em;
-            opacity: 0.8;
-        }
+        .date { margin-top: 10px; font-size: 0.9em; opacity: 0.8; }
     </style>
 </head>
 <body>
-
     <div class="container">
         <h1>Привет! Это мой сайт.</h1>
-        <p>
-            Он автоматически развернут на сервере Linux с помощью 
-            <strong>GitLab CI/CD</strong>.
-            <br>
-            Никакого FTP, никаких ручных копирований. Только код и автоматика! 🚀
-        </p>
-        
-        <div class="author">
-            Автор: Олег Воробцов
-        </div>
-        
+        <p>Он автоматически развернут на сервере Linux с помощью <strong>GitLab CI/CD</strong>.<br>Никакого FTP, только код и автоматика! 🚀</p>
+        <div class="author">Автор: Олег Воробцов</div>
         <div class="date" id="build-date"></div>
     </div>
-
     <script>
-        // Скрипт для отображения текущей даты
         const now = new Date();
         document.getElementById('build-date').textContent = "Обновлено: " + now.toLocaleDateString() + " " + now.toLocaleTimeString();
     </script>
-
 </body>
 </html>
